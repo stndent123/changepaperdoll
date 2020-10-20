@@ -9,21 +9,24 @@
 /* Begin PBXBuildFile section */
 		7C4F115D253C90BA006D593D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4F115C253C90BA006D593D /* AppDelegate.swift */; };
 		7C4F115F253C90BA006D593D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4F115E253C90BA006D593D /* SceneDelegate.swift */; };
-		7C4F1161253C90BA006D593D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4F1160253C90BA006D593D /* ViewController.swift */; };
 		7C4F1164253C90BA006D593D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C4F1162253C90BA006D593D /* Main.storyboard */; };
 		7C4F1166253C90BB006D593D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C4F1165253C90BB006D593D /* Assets.xcassets */; };
 		7C4F1169253C90BB006D593D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C4F1167253C90BB006D593D /* LaunchScreen.storyboard */; };
+		7C4F1172253C9106006D593D /* paperDollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4F1171253C9106006D593D /* paperDollViewController.swift */; };
+		7C5C93D3253DF52600920B3F /* 赤心無疆.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7C5C93D2253DF52600920B3F /* 赤心無疆.mp3 */; };
+		7C5C93D5253E68ED00920B3F /* changepaperdoll.app in Resources */ = {isa = PBXBuildFile; fileRef = 7C4F1159253C90BA006D593D /* changepaperdoll.app */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7C4F1159253C90BA006D593D /* changepaperdoll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = changepaperdoll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C4F115C253C90BA006D593D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C4F115E253C90BA006D593D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7C4F1160253C90BA006D593D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7C4F1163253C90BA006D593D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7C4F1165253C90BB006D593D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C4F1168253C90BB006D593D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C4F116A253C90BB006D593D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C4F1171253C9106006D593D /* paperDollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paperDollViewController.swift; sourceTree = "<group>"; };
+		7C5C93D2253DF52600920B3F /* 赤心無疆.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "赤心無疆.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +59,10 @@
 		7C4F115B253C90BA006D593D /* changepaperdoll */ = {
 			isa = PBXGroup;
 			children = (
+				7C5C93D2253DF52600920B3F /* 赤心無疆.mp3 */,
 				7C4F115C253C90BA006D593D /* AppDelegate.swift */,
 				7C4F115E253C90BA006D593D /* SceneDelegate.swift */,
-				7C4F1160253C90BA006D593D /* ViewController.swift */,
+				7C4F1171253C9106006D593D /* paperDollViewController.swift */,
 				7C4F1162253C90BA006D593D /* Main.storyboard */,
 				7C4F1165253C90BB006D593D /* Assets.xcassets */,
 				7C4F1167253C90BB006D593D /* LaunchScreen.storyboard */,
@@ -124,8 +128,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C5C93D3253DF52600920B3F /* 赤心無疆.mp3 in Resources */,
 				7C4F1169253C90BB006D593D /* LaunchScreen.storyboard in Resources */,
 				7C4F1166253C90BB006D593D /* Assets.xcassets in Resources */,
+				7C5C93D5253E68ED00920B3F /* changepaperdoll.app in Resources */,
 				7C4F1164253C90BA006D593D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +143,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C4F1161253C90BA006D593D /* ViewController.swift in Sources */,
 				7C4F115D253C90BA006D593D /* AppDelegate.swift in Sources */,
+				7C4F1172253C9106006D593D /* paperDollViewController.swift in Sources */,
 				7C4F115F253C90BA006D593D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

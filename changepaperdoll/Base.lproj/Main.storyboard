@@ -1,24 +1,172 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17504.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Paper Doll View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="paperDollViewController" customModule="changepaperdoll" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hair1" translatesAutoresizingMaskIntoConstraints="NO" id="Euu-fI-Gvv">
+                                <rect key="frame" x="75" y="44" width="240" height="155"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="NVJ-5B-vkC"/>
+                                    <constraint firstAttribute="height" constant="155" id="v5s-pL-flk"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloth3" translatesAutoresizingMaskIntoConstraints="NO" id="NJS-Sc-Mcd">
+                                <rect key="frame" x="0.0" y="180" width="390" height="336"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="390" id="Ta8-0A-XCq"/>
+                                    <constraint firstAttribute="height" constant="336" id="wLM-ZA-MzQ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face5" translatesAutoresizingMaskIntoConstraints="NO" id="iwb-Y8-4sh">
+                                <rect key="frame" x="167" y="104" width="71" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="71" id="fL9-9r-C6m"/>
+                                    <constraint firstAttribute="height" constant="68" id="z7M-b9-H1F"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="zjB-d2-527">
+                                <rect key="frame" x="0.0" y="524" width="394" height="167"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hHK-uY-kRE">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="45"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="髮型" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3X-8n-mJP">
+                                                <rect key="frame" x="0.0" y="0.0" width="57" height="45"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="ufG-LQ-VUN">
+                                                <rect key="frame" x="65" y="0.0" width="329" height="46"/>
+                                                <segments>
+                                                    <segment title="髮型1"/>
+                                                    <segment title="髮型2"/>
+                                                    <segment title="髮型3"/>
+                                                    <segment title="髮型4"/>
+                                                    <segment title="髮型5"/>
+                                                    <segment title="髮型6"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="changeSegment:" destination="BYZ-38-t0r" eventType="valueChanged" id="LQq-xr-a8P"/>
+                                                </connections>
+                                            </segmentedControl>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pis-wX-BqL">
+                                        <rect key="frame" x="0.0" y="61" width="394" height="45"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="表情" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mh1-sn-Y09">
+                                                <rect key="frame" x="0.0" y="0.0" width="57" height="45"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="kqo-uF-267">
+                                                <rect key="frame" x="65" y="0.0" width="329" height="46"/>
+                                                <segments>
+                                                    <segment title="表情1"/>
+                                                    <segment title="表情2"/>
+                                                    <segment title="表情3"/>
+                                                    <segment title="表情4"/>
+                                                    <segment title="表情5"/>
+                                                    <segment title="表情6"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="changeSegment:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ynj-1W-jJn"/>
+                                                </connections>
+                                            </segmentedControl>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rQV-rq-iMb">
+                                        <rect key="frame" x="0.0" y="122" width="394" height="45"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="服裝" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHn-Aj-Mud">
+                                                <rect key="frame" x="0.0" y="0.0" width="57" height="45"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="HNA-Fw-s12">
+                                                <rect key="frame" x="65" y="0.0" width="329" height="46"/>
+                                                <segments>
+                                                    <segment title="服裝1"/>
+                                                    <segment title="服裝2"/>
+                                                    <segment title="服裝3"/>
+                                                    <segment title="服裝4"/>
+                                                    <segment title="服裝5"/>
+                                                    <segment title="服裝6"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="changeSegment:" destination="BYZ-38-t0r" eventType="valueChanged" id="w6E-DT-n4V"/>
+                                                </connections>
+                                            </segmentedControl>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="167" id="Gmc-gr-90u"/>
+                                    <constraint firstAttribute="width" constant="394" id="rVc-HU-B39"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NJS-Sc-Mcd" secondAttribute="bottom" constant="294" id="1rL-AP-iPu"/>
+                            <constraint firstItem="zjB-d2-527" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5eP-LR-nnS"/>
+                            <constraint firstItem="zjB-d2-527" firstAttribute="top" secondItem="NJS-Sc-Mcd" secondAttribute="bottom" constant="8" id="8YH-Jc-sGo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iwb-Y8-4sh" secondAttribute="trailing" constant="152" id="BJp-39-DfY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zjB-d2-527" secondAttribute="bottom" constant="119" id="GwI-Lm-2Tc"/>
+                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="zjB-d2-527" secondAttribute="trailing" id="JTM-nJ-EUF"/>
+                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="zjB-d2-527" secondAttribute="trailing" id="Lpz-Rq-Hxp"/>
+                            <constraint firstItem="Euu-fI-Gvv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="QLH-eQ-a6y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Euu-fI-Gvv" secondAttribute="trailing" constant="75" id="XIB-RY-6WX"/>
+                            <constraint firstItem="NJS-Sc-Mcd" firstAttribute="top" secondItem="iwb-Y8-4sh" secondAttribute="bottom" constant="8" id="Yw7-WX-MTd"/>
+                            <constraint firstItem="NJS-Sc-Mcd" firstAttribute="top" secondItem="iwb-Y8-4sh" secondAttribute="bottom" constant="8" id="bAt-fe-KID"/>
+                            <constraint firstItem="NJS-Sc-Mcd" firstAttribute="centerX" secondItem="Euu-fI-Gvv" secondAttribute="centerX" id="cF9-LF-ML1"/>
+                            <constraint firstItem="iwb-Y8-4sh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="167" id="eHy-vj-Hjm"/>
+                            <constraint firstItem="iwb-Y8-4sh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="jDS-nE-Ea9"/>
+                            <constraint firstItem="NJS-Sc-Mcd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="msc-yx-BJk"/>
+                            <constraint firstItem="NJS-Sc-Mcd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pBL-Y2-N8g"/>
+                            <constraint firstItem="Euu-fI-Gvv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qGo-cV-FwN"/>
+                            <constraint firstItem="NJS-Sc-Mcd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sot-T9-Xve"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Euu-fI-Gvv" secondAttribute="bottom" constant="611" id="ueC-00-2jn"/>
+                            <constraint firstItem="NJS-Sc-Mcd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ypz-Rm-aNe"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="clothImageView" destination="NJS-Sc-Mcd" id="plK-ro-flA"/>
+                        <outlet property="faceImageView" destination="iwb-Y8-4sh" id="Tlp-Gd-0So"/>
+                        <outlet property="hairImageView" destination="Euu-fI-Gvv" id="75M-TZ-xva"/>
+                        <outletCollection property="changeSegments" destination="ufG-LQ-VUN" collectionClass="NSMutableArray" id="hyF-u1-GLZ"/>
+                        <outletCollection property="changeSegments" destination="kqo-uF-267" collectionClass="NSMutableArray" id="vAZ-BN-8DM"/>
+                        <outletCollection property="changeSegments" destination="HNA-Fw-s12" collectionClass="NSMutableArray" id="EgC-Ca-1oc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-183.07692307692307" y="62.559241706161131"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cloth3" width="1645" height="2500"/>
+        <image name="face5" width="289" height="293"/>
+        <image name="hair1" width="473" height="567"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
